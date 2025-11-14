@@ -35,6 +35,7 @@ jobs:
       - name: Copy bundles to root
         run: |
           mkdir -p _site
+          touch _site/.nojekyll
           cp *.bundle _site/ 2>/dev/null || true
           cp catalog*.json _site/ 2>/dev/null || true
           cp catalog*.hash _site/ 2>/dev/null || true
